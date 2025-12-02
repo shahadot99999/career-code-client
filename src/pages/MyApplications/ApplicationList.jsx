@@ -2,7 +2,11 @@ import React, { use } from 'react';
 import JobApplicationRow from './JobApplicationRow';
 
 const ApplicationList = ({myApplicationsPromise}) => {
-    const applications = use(myApplicationsPromise)
+    const applications= use(myApplicationsPromise)
+
+     // FIX: Always ensure it's an array
+    // If applicationsData is undefined, null, or not an array, use empty array
+    //const applications = Array.isArray(applicationsData) ? applicationsData : [];
 
     return (
         <div>
